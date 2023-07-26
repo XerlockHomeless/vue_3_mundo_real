@@ -65,7 +65,7 @@ onMounted(() => {
 
 > Observe o que acontece quando chamamos nosso URL "**my-json-server**", desta vez com um ``id``no final dele (**…/events/123**). Isso tem como alvo um único evento, onde seu ``id`` corresponde ao final do nosso URL: ``123``. Veja a figura abaixo.
 
-![url_api_call](../img_readme/url_api_call.jpg)
+![url_api_call](img_readme/url_api_call.jpg)
 
 > Este é o tipo de URL que usaremos ao buscar um único evento, onde termina com o ``id` do evento. Vamos entrar em nosso arquivo ``EventService`` e adicionar essa chamada de API agora.
 
@@ -177,7 +177,7 @@ Agora, quando um de nossos ``EventCards`` for clicado, seremos encaminhados para
 
 Se verificarmos isso no browser, veremos um erro no console ao clicarmos em um evento (ver figura abaixo).
 
-![error_click_event](../img_readme/error_click_event.jpg)
+![error_click_event](img_readme/error_click_event.jpg)
 
 
 > O que está acontecendo aqui é que ``EventDetailsView`` está tentando exibir os detalhes do evento antes de receber o evento de volta da chamada da API. Precisamos dizer ao nosso componente para esperar até que tenha o evento antes de tentar exibir seus detalhes. Felizmente, essa é uma solução muito simples.
@@ -199,7 +199,7 @@ Se verificarmos isso no browser, veremos um erro no console ao clicarmos em um e
 
 3.3 Se verificarmos novamente no navegador, veremos que está funcionando até agora… Quando clicamos no evento "_Cat Adoption Day_" ``EventCard``, somos levados a uma visualização que exibe os detalhes desse evento. Veja a figura abaixo.
 
-![cat_adoption_day_event](../img_readme/cat_adoption_day_event.jpg)
+![cat_adoption_day_event](img_readme/cat_adoption_day_event.jpg)
 
 > No entanto, se clicarmos em qualquer outro ``EventCard``, ainda estamos obtendo os mesmos detalhes do "_Cat Adoption Day_", e o ``id`` no final de nosso URL é o mesmo: **123**. Isso é esperado, já que codificamos o ``id`` que estamos passando para a chamada ``getEvent`` e no caminho da rota ``EventDetails`.
 
@@ -210,7 +210,7 @@ Isso nos leva ao final da **Parte 1** e ao início da **Parte 2**, onde tornamos
 
 Para tornar nosso comportamento de roteamento dinâmico, precisamos trocar o ``id`` codificado em nosso caminho (**/123**) e substituí-lo por um segmento dinâmico. Este é basicamente um parâmetro variável para o caminho do URL, que é atualizado com o ``id`` de qualquer evento exibido atualmente nessa rota. A figura abaixo mostra o que pretendemos fazer.
 
-![dynamic_segment](../img_readme/dynamic_segment.jpg)
+![dynamic_segment](img_readme/dynamic_segment.jpg)
 
 > Em seguida, desejaremos prover esse segmento dinâmico no componente ``EventDetailsView`` como uma ``prop`` a ser usada ao fazer a chamada ``getEvent``.
 
@@ -313,7 +313,7 @@ onMounted(() => {
 
 5.3 Se verificarmos isso no browser, poderemos clicar com sucesso em um ``EventCard`` e exibir os detalhes apropriados para esse evento. Veja a figura abaixo.
 
-![click_event_succesful](../img_readme/click_event_succesful.jpg)
+![click_event_succesful](img_readme/click_event_succesful.jpg)
 
 ### **Passo 6. Limpando nosso Código**
 
@@ -321,7 +321,7 @@ Com isso, finalizamos nosso comportamento de roteamento dinâmico. Ufa! Foram mu
 
 Primeiro, nossos ``EventCards`` não parecem tão bonitos agora que estão envolvidos com um``RouterLink`` (ver figura abaixo).
 
-![event_card_no_nice](../img_readme/event_card_no_nice.jpg)
+![event_card_no_nice](img_readme/event_card_no_nice.jpg)
 
 
 Vamos adicionar uma classe chamada ``event-link`` ao ``<RouterLink>`` para torná-lo mais bonito.
@@ -351,7 +351,7 @@ Vamos adicionar uma classe chamada ``event-link`` ao ``<RouterLink>`` para torn�
 ```
 A figura abaixo mostra que a visualização de evento ficou mais agradável.
 
-![event_card_nice](../img_readme/event_card_nice.jpg)
+![event_card_nice](img_readme/event_card_nice.jpg)
 
 Por uma questão de consistência, também podemos atualizar o arquivo ``App.vue`` para usar rotas nomeadas em vez de caminhos codificados.
 
