@@ -15,7 +15,7 @@ Instale, também uma extensão do VSCode chamada [es6-string.html](https://marke
 
 Agora nosso aplicativo de exemplo tem todos os recursos necessários. Vários conceitos foram vistos ao longo do caminho e exploramos as práticas fundamentais de desenvolvimento de aplicativos Vue. Agora estamos prontos para levar nosso projeto para a próxima etapa de qualquer aplicativo do mundo real, que é fazer a implantação dele (i.e. _fazendo o deploy_). Neste tutorial, entenderemos o que acontece no processo de construção e como implantar sem problemas nosso aplicativo com uma plataforma conveniente chamada [**Render**](https://render.com/). Ver figura abaixo.
 
-![build_deploy_with_render](../img_readme/build_deploy_with_render.png)
+![build_deploy_with_render](img_readme/build_deploy_with_render.png)
 
 
 
@@ -33,11 +33,11 @@ Lembra-se no início do curso, quando aprendemos como o arquivo "**index.html**"
 
 Para a produção dentro do arquivo "**main.js**" faremos a criação e a "montagem" do nosso _app_. Veja a figura abaixo.
 
-![create_mount_app](../img_readme/create_mount_app.png)
+![create_mount_app](img_readme/create_mount_app.png)
 
 Todo o processo pode ser visualizado na figura abaixo.
 
-![vue_whole_process](../img_readme/vue_whole_process.png)
+![vue_whole_process](img_readme/vue_whole_process.png)
 
 
 
@@ -71,7 +71,7 @@ dist/assets/index.a62f66a8.js    104.29 KiB / gzip: 40.77 KiB
 
 > Como podemos ver, nosso aplicativo foi compilado com sucesso e enviado para um novo diretório chamado ``dist``. Esse diretório contém o código pronto para produção que implantaremos.
 
-![dist_folder](../img_readme/dist_folder.jpg)
+![dist_folder](img_readme/dist_folder.jpg)
 
 Dando uma olhada dentro deste novo diretório ``dist``, veremos uma pasta chamada ``assets`` que contém nosso código CSS e JS integrado. Esta pasta ``dist`` também contém um arquivo "**index.html**". O seu conteúdo conterá, entre outras coisas o trecho de código abaixo.
 
@@ -108,23 +108,23 @@ Depois que seu aplicativo é implantado, há preocupações adicionais em mantê
 
 Felizmente, existem plataformas que fazem muito do trabalho pesado de implantação (e reimplantação) para nós. O que nos leva à uma solução sobre a qual aprenderemos neste tutorial: o [**Render**](https://render.com/).
 
-![render_home_page](../img_readme/render_home_page.png)
+![render_home_page](img_readme/render_home_page.png)
 
 Render fornece _deploys_ instantâneos para seus aplicativos. Basta conectá-lo ao repositório do seu projeto e ele cria e implanta automaticamente seu aplicativo em um site ao vivo que os usuários podem ver e interagir. Ele também pode executar atualizações automáticas para você, para que, sempre que ao enviar algo para seu repositório, o ``Render`` reconstrói e implanta automaticamente seu site sem nenhum trabalho adicional de sua parte.
 
-![how_render_works](../img_readme/how_render_works.png)
+![how_render_works](img_readme/how_render_works.png)
 
 Para começar a usá-lo para implantar nosso aplicativo Vue, basta criar uma conta gratuita. Clique no botão ``Sign in`` no canto superior à direita. Você será direcionado para a página abaixo.
 
-![render_sign_in_page](../img_readme/render_sign_in_page.png)
+![render_sign_in_page](img_readme/render_sign_in_page.png)
 
 Caso seja a primeira vez que você acessa o site, clique no botão ``SIGN UP`` quase no rodapé da página. A página será esta.
 
-![render_sign_up_page](../img_readme/render_sign_up_page.png)
+![render_sign_up_page](img_readme/render_sign_up_page.png)
 
 Após criar a sua conta, você receberá um link de verificação por e-mail, no qual clicará para entrar em sua nova conta. Ao entrar, você verá que há vários serviços disponíveis no Render. Vamos começar clicando no botão azul ``New +``, que revela um menu suspenso com algumas opções. Ver figura abaixo.
 
-![new_button_with_options](../img_readme/new_button_with_options.jpg)
+![new_button_with_options](img_readme/new_button_with_options.jpg)
 
 Como você pode ver, podemos implantar um site estático servido em um CDN global com a capacidade de adicionar um domínio personalizado, além de SSL pronto para uso. Se você não estiver familiarizado, o **SSL (Secure Sockets Layer)** é um protocolo para navegadores e servidores da Web que permite a autenticação, criptografia e descriptografia de dados enviados pela Internet. Em outras palavras: é uma medida de segurança integrada que vem de graça com o Render.
 
@@ -132,11 +132,11 @@ Selecionaremos esta opção ``Static Site`` para implantar nosso aplicativo Vue 
 
 > **IMPORTANTE**: Para seguir essas etapas, você precisará dar um _fork_ no repositório do curso Vue Mastery para sua conta pessoal do Github. Dessa forma, você poderá conectar o repositório nesta etapa. Veja figura abaixo.
 
-![install_render](../img_readme/install_render.jpg)
+![install_render](img_readme/install_render.jpg)
 
 Ao clicar em instalar (``install``), você será redirecionado de volta ao Render, onde deverá ver o repositório recém-conectado aparecendo. Veja figura abaixo.
 
-![install_repo_showing_up](../img_readme/install_repo_showing_up.jpg)
+![install_repo_showing_up](img_readme/install_repo_showing_up.jpg)
 
 Agora estamos prontos para selecionar esse repositório e implantá-lo como um site estático, que é um processo muito simples. Como a página diz de forma inteligente: “Você parece estar usando Vue.js, então preenchemos automaticamente alguns campos de acordo.”
 
@@ -150,7 +150,7 @@ Também existem opções avançadas (i.e. ``Advanced``) adicionais, incluindo a 
 
 Quero chamar sua atenção para o campo ``Auto Deploy``, que é definido como “**Yes**” por padrão. Isso significa que nosso aplicativo será reimplantado automaticamente sempre que uma alteração for enviada para essa ramificação, o que é um recurso incrível. Se quiséssemos lidar com isso manualmente, alternaríamos isso para "**No**" e, em vez disso, poderíamos acionar uma implantação manual com o botão de mesmo nome. Veja figura abaixo.
 
-![manual_deploy](../img_readme/manual_deploy.jpg)
+![manual_deploy](img_readme/manual_deploy.jpg)
 
 Agora estamos prontos para clicar no botão ``Create Static Site`` e assistir o **Render** transformar nosso site para que fique ao vivo.
 
@@ -161,7 +161,7 @@ Agora podemos clicar no link que o Render criou para nosso site, que no nosso ca
 
 À medida que clicamos, parece que está funcionando. Mas observe o que acontece quando abrimos uma nova aba e tentamos ir para uma página específica, como: ```https://real-world-vue-3.onrender.com/event/123```.
 
-![render_page_not_found](../img_readme/render_page_not_found.jpg)
+![render_page_not_found](img_readme/render_page_not_found.jpg)
 
 Oh não… estamos recebendo uma mensagem “**Not Found**” e há esse erro **404** no console. Por que isso está acontecendo?
 
@@ -176,13 +176,13 @@ const router = createRouter({
 
 No modo de histórico, nosso aplicativo aproveita a API ``history.pushState`` do browser para alterar o URL sem recarregar a página. Veja a figura abaixo.
 
-![understanding_history_mode](../img_readme/understanding_history_mode.jpg)
+![understanding_history_mode](img_readme/understanding_history_mode.jpg)
 
 O problema que estamos enfrentando atualmente é o fato de que nosso aplicativo é um aplicativo de página única (**SPA**), o que significa que tudo precisa ser servido a partir de "**index.html**". Embora nosso servidor de desenvolvimento tenha sido configurado para funcionar dessa maneira para nós, precisamos configurar as regras do Render para que ele sempre forneça "**index.html**", não importando em qual URL naveguemos.
 
 Podemos fazer isso de maneira muito simples na guia Redirecionar/Reescrever (``Redirect/Rewrite``) do painel do nosso site estático:
 
-![static_site_dashboard](../img_readme/static_site_dashboard.jpg)
+![static_site_dashboard](img_readme/static_site_dashboard.jpg)
 
 Adicionaremos um _catchall_  de ``/*`` e diremos a ele para sempre _Rewrite_ para ``/index.html`` Agora, não importa qual URL solicitamos, ele será servido a partir de "**index.html**". Problema resolvido.
 
@@ -197,7 +197,7 @@ Com esse _catchall_ implementado, agora resolvemos nosso problema e implantamos 
 
 Já vimos a guia ``Redirects/Rewrites``, mas existem outras guias aqui que são igualmente úteis, como ``Events``, que mostra um histórico de implantações que foram feitas. É aqui que podemos executar uma reversão para uma compilação anterior, se necessário. Ver figura abaixo.
 
-![render_events_tab](../img_readme/render_events_tab.jpg)
+![render_events_tab](img_readme/render_events_tab.jpg)
 
 ####Guia (Tab) ``Pull Requests``
 
@@ -205,7 +205,7 @@ Vamos explorar agora a guia ``Pull Request`` (**PR**). Nela, você pode habilita
 
 Falando em colaboração, você também pode criar e trabalhar em equipes no Render, o qual um titular de conta individual pode criar a partir do menu suspenso conforme figura abaixo.
 
-![render_team_collaboration](../img_readme/render_team_collaboration.jpg)
+![render_team_collaboration](img_readme/render_team_collaboration.jpg)
 
 
 ####Render efetua a escalabilidade com você
