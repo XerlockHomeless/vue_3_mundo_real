@@ -15,7 +15,7 @@ Instale, também uma extensão do VSCode chamada [es6-string.html](https://marke
 
 Nosso aplicativo está atualmente, funcionando assim: os eventos que estamos exibindo são simplesmente codificados dentro dos dados do componente ``EventListView.vue``. Em um _app_ do mundo real, provavelmente haveria algum tipo de banco de dados de eventos do qual estaríamos extraindo. Nosso aplicativo faria uma solicitação para os eventos, o servidor responderia com eles (em formato **JSON**), nós os pegaríamos e os definiríamos como dados de nosso componente (``ref``), que exibiríamos na nossa ``view``. A figura abaixo ilustra este processo.
 
-![fetch_data_api_call](../img_readme/fetch_data_api_call.jpg)
+![fetch_data_api_call](img_readme/fetch_data_api_call.jpg)
 
 Portanto, nossas tarefas a serem executadas neste tutorial incluem:
 
@@ -146,7 +146,7 @@ Mas, o que é _lifecycle hook_ no Vue.JS? De acordo com o Chat-GPT:
 
 > Você só precisa entender que um componente tem um ciclo de vida e diferentes ganchos (ou métodos) são executados nesses diferentes estágios de seu ciclo de vida. Por exemplo, antes de ser criado, quando for criado, antes de ser montado, quando for montado e assim por diante. Veja a figura abaixo.
 
-![lifecycle_hooks](../img_readme/lifecycle_hooks.jpg)
+![lifecycle_hooks](img_readme/lifecycle_hooks.jpg)
 
 Observe na figura acima que existem oito (8) _lifecycle hooks_ no Vue.JS.
 
@@ -184,7 +184,7 @@ onMounted(() => {
 
 Porém, existe um problema com nosso código. Atualmente, estamos importando o Axios para o componente ``EventListView.vue``. Mas no próximo tutorial vamos criar um novo componente, que exibe os detalhes do nosso evento. E ele também precisará fazer uma chamada de API. Se estivermos importando o Axios para cada componente que precisa dele, estaremos criando desnecessariamente uma nova instância do Axios cada vez que fizermos isso (ver figura abaixo). Com o código da API entrelaçado em todo o nosso aplicativo, isso fica confuso e torna nosso aplicativo mais difícil de depurar.
 
-![problem_with_our_code](../img_readme/problem_with_our_code.jpg)
+![problem_with_our_code](img_readme/problem_with_our_code.jpg)
 
 
 4.1 Uma solução mais limpa e escalável é modularizar nosso código de API em uma camada de serviço. Para fazer isso, crie uma pasta chamada ``services`` em "**src**".
@@ -256,13 +256,13 @@ onMounted(() => {
 
 E com isso, refatoramos nosso código de API em uma camada de serviço modular. O refatoramento está ilustrado na figura abaixo.
 
-![modular_layer_service](../img_readme/modular_layer_service.jpg)
+![modular_layer_service](img_readme/modular_layer_service.jpg)
 
 
 ### **Passo 6. Fazendo o Fechamento**
 
 6.1 Repita o procedimento efetuado no **Passo 3.10** do **Tutorial 3** para visualizarmos no browser o que acabamos de fazer no passo anterior. Você verá algo como a figura abaixo.
 
-![example_app_t4](../img_readme/example_app_t4.jpg)
+![example_app_t4](img_readme/example_app_t4.jpg)
 
 Ao visualizar nossos eventos no browser, os ``EventCards` parecem clicáveis. Não seria legal se pudéssemos clicar neles e ver mais detalhes sobre esse evento? No próximo tutorial, aprenderemos como fazer isso usando as habilidades de roteamento dinâmico do **Vue Router**.
