@@ -5,7 +5,17 @@ import axios from 'axios'
 
 const events = ref(null)
 
-onMounted(() => {})
+onMounted(() => {
+  axios
+    .get('https://my-json-server.typicode.com/XerlockHomeless/vue_3_mundo_real/events')
+    .then(res => {
+      events.value = res.data
+    })
+    .catch(rej => {
+      alert(rej)
+      console.error(rej)
+    })
+})
 </script>
 
 <template>
